@@ -42,4 +42,8 @@ var Node = function(value) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ * creation = O(1) constant
+ * addToTail = O(1) constant
+ * removeHead = O(1) constant
+ * contains = O(n) linear
  */
