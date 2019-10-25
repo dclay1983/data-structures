@@ -43,5 +43,9 @@ setPrototype.remove = function(item) {
 
 /*
 * Complexity: What is the time complexity of the above functions?
-*
+* Creation: O(1) Constant
+* add: O(n) Linear
+* contains: O(log(n)) Logarithmic
+* _indexOf: O(log(n)) Logarithmic
+* remove: O(n) Linear
 */
