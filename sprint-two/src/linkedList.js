@@ -35,6 +35,8 @@ var LinkedList = function() {
     return false;
   };
 
+  list.isEmpty = function() { return this.head === null; };
+
   return list;
 };
 

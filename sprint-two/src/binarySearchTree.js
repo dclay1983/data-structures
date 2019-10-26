@@ -36,6 +36,17 @@ class BinarySearchTree {
     if (this.right) { this.right.depthFirstLog(cb); }
   }
 
+  breadthFirstLog(cb) {
+    const queue = LinkedList();
+    queue.addToTail(this);
+    while (!queue.isEmpty()) {
+      const node = queue.removeHead();
+      cb(node.value);
+      if (node.left) { queue.addToTail(node.left); }
+      if (node.right) { queue.addToTail(node.right); }
+    }
+  }
+
   _rotate(rot) {
     var antiRot = rot === 'left' ? 'right' : 'left';
 
