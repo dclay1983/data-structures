@@ -18,7 +18,7 @@ HashTable.prototype.insert = function(k, v, copy = false) {
   if (!tuple) {
     bucket.push([k, v]);
     this._count++;
-    if (!copy) { this._resize(); }
+    !copy ? this._resize() : null;
   } else {
     tuple[1] = v;
   }
