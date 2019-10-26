@@ -3,8 +3,12 @@ var LinkedList = function() {
   list.head = null;
   list.tail = null;
 
+  list._newNode = function(value) {
+    return Node(value);
+  };
+
   list.addToTail = function(value) {
-    var node = Node(value);
+    var node = this._newNode(value);
     if (this.head === null) {
       this.head = this.tail = node;
     } else {
