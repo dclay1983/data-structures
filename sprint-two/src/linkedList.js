@@ -3,6 +3,8 @@ var LinkedList = function() {
   list.head = null;
   list.tail = null;
 
+  // Private function used to create a Node object
+  // Used to permit child classes to define Node for more complex access
   list._newNode = function(value) {
     return Node(value);
   };
@@ -19,8 +21,9 @@ var LinkedList = function() {
 
   list.removeHead = function() {
     var node = this.head;
-    this.head = node.next;
-    return node.value;
+    this.head = node ? node.next : null;
+    if (this.head === null) { this.tail = this.head; }
+    return node ? node.value : undefined;
   };
 
   list.contains = function(target) {
